@@ -16,7 +16,7 @@ test('Deve tocar uma música', async ({ page }) => {
   await page.route('**/songs', route => route.fulfill({
     status: 200,
     body: JSON.stringify([song])
-  }))
+  }));
 
   await page.goto('/');
 
